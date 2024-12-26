@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My projects</title>
+    <!-- Remove CDN import since we'll use ES modules -->
+  <script type="module" crossorigin src="/assets/projects-CnP6jVmq.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three.module-DeTNbURA.js">
+  <link rel="modulepreload" crossorigin href="/assets/main-B_O-L8LT.js">
+  <link rel="modulepreload" crossorigin href="/assets/video-preloader-Cm1oYsQj.js">
+  <link rel="stylesheet" crossorigin href="/assets/three-CQbs2UAC.css">
+</head>
+<body>
+    <header class="menu">
+        <a href="index.html" class="nav-menu" id="logo">
+            <svg style="transform: scale(1.25) translate(10px, 5px);" id="logo-svg" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle" d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="url(#paint0_linear_421_59)"/>
+                <path class="diamond" d="M29.9004 0L39.7999 9.8995L29.9004 19.799L20.0009 9.8995L29.9004 0Z" style="mix-blend-mode: color-burn;" fill="url(#paint1_linear_421_59)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_421_59" x1="-1.41493e-07" y1="4.29182" x2="14.85" y2="28.3115" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0655326" stop-color="#FF5757"/>
+                        <stop offset="0.396204" stop-color="#FF5757"/>
+                        <stop offset="1" stop-color="#FF8438"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_421_59" x1="2.60995" y1="18.0497" x2="26.2794" y2="-13.1666" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#2654EC"/>
+                        <stop offset="0.482138" stop-color="#3527F8"/>
+                        <stop offset="0.898658" stop-color="#3527F8 "/>
+                    </linearGradient>
+                </defs> 
+            </svg>
+        </a>
+        <a href="projects.html" class="nav-menu selectedPage">Projects</a>
+        <a href="about.html" class="nav-menu">About</a>
+        <a href="contact.html" class="nav-menu">Contact</a>
+    </header>
+
+    <video id="preview-video" 
+           style="position: fixed; right: 0; top: 0; width: 40vw; height: 100vh; object-fit: cover; z-index: -1;"
+           autoplay 
+           loop 
+           muted 
+           playsinline>
+    </video>
+
+    <div id="loader" style="display: none;">
+        <div class="loader-content">
+            <span class="loader-spinner"></span>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
+
+    <main style="top: 0; z-index: -1; position: absolute; width: 1188px; height: 911px; opacity: 1;"></main>
+    <section class="herobanner-project">
+        <div class="menu-projects-content">
+            <h3 class="projects-category" data-category="generative">Generative art</h3>
+            <h1 class="projects-names" data-src="ProjetMajGeneratif.mp4" data-projectIndex="4" data-category="generative">
+              TouchDesigner Expo
+            </h1>
+      
+            <h3 class="projects-category" data-category="design">Design</h3>
+            <h1 class="projects-names" data-src="ProjetMajMTH2.mp4" data-projectIndex="0" data-category="design">
+              MoreThanHoney
+            </h1>
+            <h1 class="projects-names" data-src="ProjetMajVarType.mp4" data-projectIndex="1" data-category="design">
+              VarType
+            </h1>
+      
+            <h3 class="projects-category" data-category="development">Development</h3>
+            <h1 class="projects-names" data-src="ProjetMajDalcans2.mp4" data-projectIndex="2" data-category="development">
+              Dalcans Website
+            </h1>
+            <h1 class="projects-names" data-src="ProjetLedra.mp4" data-projectIndex="3" data-category="development">
+              Ledra Studio
+            </h1>
+          </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Lahcene studio. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .loader-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .loader-spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #ffffff3d;
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        .loader-text {
+            color: white;
+            font-size: 14px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

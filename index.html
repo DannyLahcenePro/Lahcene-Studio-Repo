@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lahcene Studio</title>
+    <style>
+        #preload-progress {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        #preload-progress.visible {
+            opacity: 1;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/main-ChBhXZvb.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three.module-DeTNbURA.js">
+  <link rel="modulepreload" crossorigin href="/assets/video-preloader-Cm1oYsQj.js">
+  <link rel="modulepreload" crossorigin href="/assets/main-B_O-L8LT.js">
+  <link rel="stylesheet" crossorigin href="/assets/three-CQbs2UAC.css">
+  <link rel="stylesheet" crossorigin href="/assets/main-1zv1Xdq_.css">
+</head>
+
+<body>
+    <header class="menu">
+        <a href="index.html" class="nav-menu" id="logo">
+            <svg style="transform: scale(1.25) translate(10px, 5px);" id="logo-svg" width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle" d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="url(#paint0_linear_421_59)"/>
+                <path class="diamond" d="M29.9004 0L39.7999 9.8995L29.9004 19.799L20.0009 9.8995L29.9004 0Z" style="mix-blend-mode: color-burn;" fill="url(#paint1_linear_421_59)"/>
+                <defs>
+                    <linearGradient id="paint0_linear_421_59" x1="-1.41493e-07" y1="4.29182" x2="14.85" y2="28.3115" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0655326" stop-color="#FF5757"/>
+                        <stop offset="0.396204" stop-color="#FF5757"/>
+                        <stop offset="1" stop-color="#FF8438"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_421_59" x1="2.60995" y1="18.0497" x2="26.2794" y2="-13.1666" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#2654EC"/>
+                        <stop offset="0.482138" stop-color="#3527F8"/>
+                        <stop offset="0.898658" stop-color="#3527F8 "/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </a>
+        <a href="projects.html" class="nav-menu">Projects</a>
+        <a href="about.html" class="nav-menu">About</a>
+        <a href="contact.html" class="nav-menu">Contact</a>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 id="LahceneStudio">Lahcene Studio</h1>
+            <h1 id="homeWelcome">
+                <span class="touchdesigner-svg">
+                    TouchDesigner Artist
+                    <svg width="50" height="32" viewBox="0 0 29 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M28.5068 8.48528L20.0215 0L15.4632 4.55833C14.0884 2.13499 11.4851 0.5 8.5 0.5C4.08172 0.5 0.5 4.08172 0.5 8.5C0.5 12.9183 4.08172 16.5 8.5 16.5C11.4929 16.5 14.1019 14.8565 15.4738 12.4229L20.0215 16.9706L28.5068 8.48528Z"
+                            fill="url(#paint0_linear_440_2)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_440_2" x1="-1" y1="5" x2="27" y2="10.5"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FF5757" />
+                                <stop offset="0.231948" stop-color="#F3604D" />
+                                <stop offset="0.458735" stop-color="#E743CC" />
+                                <stop offset="0.755" stop-color="#5765FF" />
+                                <stop offset="0.945" stop-color="#4D2ACB" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="design-svg">
+                    UX-UI Designer
+                    <svg width="30" height="28" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.5 7C0.5 3.13401 3.63401 0 7.5 0C11.366 0 14.5 3.13401 14.5 7C14.5 10.866 11.366 14 7.5 14C3.63401 14 0.5 10.866 0.5 7Z"
+                            fill="#FF5757" />
+                    </svg>
+                </span>
+                <span class="development-svg">
+                    Web Developer
+                    <svg width="30" height="29" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.49911 0L16.4982 7.9991L8.49911 15.9982L0.5 7.9991L8.49911 0Z" fill="rgb(38, 84, 236)" />
+                    </svg>
+                </span>
+            </h1>
+            <a href="projects.html" id="subtext">Explore my digital creations</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lahcene studio. All rights reserved.</p>
+    </footer>
+
+    <div id="preload-progress">Préchargement des vidéos: <span id="progress">0</span>%</div>
+
+</body>
+
+</html>

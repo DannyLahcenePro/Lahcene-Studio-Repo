@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Lahcene Studio</title>
+    <style>
+
+        .about-content {
+            width: 90%;
+            max-width: 1400px;
+            position: relative;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, minmax(120px, auto));
+            gap: 1.5rem;
+            height: auto;
+        }
+
+        .bento-item {
+            padding: 1.5rem;
+            background: rgba(13, 0, 92, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .about-text {
+            grid-column: 3 / 5;
+            grid-row: 1 / 4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            background: linear-gradient(142deg, rgba(38, 84, 236, 0.15) 0%, rgba(231, 67, 204, 0.15) 50%, rgba(255, 87, 87, 0.15) 100%);
+        }
+
+        .about-text #quote {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .profile-card {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(142deg, rgba(38, 84, 236, 0.1) 0%, rgba(231, 67, 204, 0.1) 50%, rgba(255, 87, 87, 0.1) 100%);
+        }
+
+        .generative {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            background: linear-gradient(220deg, rgb(255 87 87 / 25%) 0%, rgba(231, 67, 204, 0.1) 46.31%, rgb(27 16 255 / 30%) 95.94%);
+        }
+
+        .design {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            
+            background: linear-gradient(129.1deg, rgb(255 21 60 / 21%) 14.5%, rgba(255, 83, 135, 0.1) 39.11%, rgb(255 132 56 / 21%) 84.05%);
+        }
+
+        .development {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            background: linear-gradient(142deg, rgb(38 84 236 / 38%) 7.83%, rgba(91, 91, 255, 0.1) 55.07%, rgba(77, 0, 255, 0.1) 95.88%);
+        }
+
+        .tools {
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            background: linear-gradient(98deg, rgba(38, 84, 236, 0.1) 0%, rgba(231, 67, 204, 0.1) 50%, rgba(255, 87, 87, 0.1) 100%);
+        }
+
+        .bento-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-switch {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .language-switch button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-switch button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .school-link {
+            color: #00aaff;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .school-link:hover {
+            color: #66ccff;
+        }
+
+        main {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover .profile-image img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            text-align: left;
+
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 1rem;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1rem;
+                overflow-y: scroll;
+                max-height: 91vh;
+            }
+
+            .about-text,
+            .profile-card,
+            .generative,
+            .design,
+            .development,
+            .tools {
+                grid-column: 1;
+                grid-row: auto;
+            }
+
+            .about-text {
+                text-align: left;
+            }
+
+            .about-text #quote {
+                text-align: center;
+            }
+
+            .tools {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/about-CDy3RCjV.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three.module-DeTNbURA.js">
+  <link rel="stylesheet" crossorigin href="/assets/three-CQbs2UAC.css">
+</head>
+
+<body>
+    <header class="menu">
+        <a href="index.html" class="nav-menu" id="logo">
+            <svg style="transform: scale(1.25) translate(10px, 5px);" id="logo-svg" width="40" height="20"
+                viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="circle"
+                    d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                    fill="url(#paint0_linear_421_59)" />
+                <path class="diamond" d="M29.9004 0L39.7999 9.8995L29.9004 19.799L20.0009 9.8995L29.9004 0Z"
+                    style="mix-blend-mode: color-burn;" fill="url(#paint1_linear_421_59)" />
+                <defs>
+                    <linearGradient id="paint0_linear_421_59" x1="-1.41493e-07" y1="4.29182" x2="14.85" y2="28.3115"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.0655326" stop-color="#FF5757" />
+                        <stop offset="0.396204" stop-color="#FF5757" />
+                        <stop offset="1" stop-color="#FF8438" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_421_59" x1="2.60995" y1="18.0497" x2="26.2794" y2="-13.1666"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#2654EC" />
+                        <stop offset="0.482138" stop-color="#3527F8" />
+                        <stop offset="0.898658" stop-color="#3527F8" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </a>
+        <a href="projects.html" class="nav-menu">Projects</a>
+        <a href="about.html" class="nav-menu selectedPage">About</a>
+        <a href="contact.html" class="nav-menu">Contact</a>
+    </header>
+
+    <main style="top: 0; z-index: -1; position: absolute; width: 1188px; height: 911px; opacity: 1;"></main>
+  
+
+    <div class="language-switch">
+        <button id="lang-en">EN</button>
+        <button id="lang-fr">FR</button>
+    </div>
+
+    <div class="about-container">
+        <div class="about-content">
+            <div class="bento-grid">
+                <div class="profile-card bento-item">
+                    <div class="profile-image">
+                        <img src="/assets/AboutBg-C2o2FHOG.jpg" alt="Danny Lahcene" />
+                    </div>
+                </div>
+                <div class="generative bento-item">
+                    <h3>Generative Art</h3>
+                    <p>TouchDesigner, Processing, Three.js</p>
+                </div>
+                <div class="design bento-item">
+                    <h3>Design</h3>
+                    <p>UI/UX, Motion Design, Creative Direction</p>
+                </div>
+                <div class="development bento-item">
+                    <h3>Development</h3>
+                    <p>Vue.js, Nuxt, WebGL, GLSL</p>
+                </div>
+                <div class="tools bento-item">
+                    <h3>Tools & Technologies</h3>
+                    <p>Figma • Blender • TouchDesigner • AdobeCC</p>
+                </div>
+                <div class="about-text bento-item">
+                    <h3 id="quote">"Where art meets code, imagination becomes reality."</h3>
+                    <p id="welcome-message">Welcome, my name is Danny Lahcene.</p>
+                    <p id="description">
+                        I started with traditional art, which paved the way for my passion for digital design.
+                        I studied at
+                        <a href="https://www.gobelins.fr/" target="_blank" class="school-link">Gobelins</a>
+                        and
+                        <a href="https://www.lecolededesign.com/" target="_blank" class="school-link">École de Design
+                            Nantes Atlantique (EDNA)</a>,
+                        two top schools in France.
+                        <br><br>
+                        I bring design and code together to create experiences that feel great and work well.
+                        With my artistic background and technical skills, I turn creative ideas into reality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Lahcene studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Animation d'apparition de about-container
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const aboutContainer = document.querySelector('.about-container');
+                if (aboutContainer) {
+                    aboutContainer.classList.remove('fade-initial');
+                    aboutContainer.style.opacity = '1';
+                    aboutContainer.querySelectorAll('*').forEach(element => {
+                        element.style.opacity = '1';
+                    });
+                }
+            }, 500);
+        });
+
+        // Gestion des langues
+        const langEnBtn = document.getElementById("lang-en");
+        const langFrBtn = document.getElementById("lang-fr");
+
+        const content = {
+            en: {
+                quote: `"Where art meets code, imagination becomes reality."`,
+                welcome: "Welcome, my name is Danny Lahcene.",
+                description: `I started with traditional art, which paved the way for my passion for digital design.
+                    I studied at 
+                    <a href="https://www.gobelins.fr/" target="_blank" class="school-link">Gobelins</a> 
+                    and 
+                    <a href="https://www.lecolededesign.com/" target="_blank" class="school-link">École de Design Nantes Atlantique (EDNA)</a>, 
+                    two top schools in France.
+                    <br><br>
+                    I bring design and code together to create experiences that feel great and work well. 
+                    With my artistic background and technical skills, I turn creative ideas into reality.`
+            },
+            fr: {
+                quote: "« Là où l'art rencontre le code, l'imagination devient réalité. »",
+                welcome: "Bienvenue, je m'appelle Danny Lahcene.",
+                description: `J'ai débuté par l'art traditionnel, qui a nourri ma passion pour le design numérique.
+                    J'ai eu la chance d'étudier à 
+                    <a href="https://www.gobelins.fr/" target="_blank" class="school-link">Gobelins</a> 
+                    et à 
+                    <a href="https://www.lecolededesign.com/" target="_blank" class="school-link">École de Design Nantes Atlantique (EDNA)</a>, 
+                    deux écoles renommées en France.
+                    <br><br>
+                    J'allie design et code pour concevoir des expériences à la fois esthétiques et intuitives. 
+                    Mon parcours artistique et mes compétences techniques me permettent de donner vie à des idées créatives.`
+            }
+        };
+
+        langEnBtn.addEventListener("click", () => {
+            document.getElementById("quote").innerHTML = content.en.quote;
+            document.getElementById("welcome-message").innerHTML = content.en.welcome;
+            document.getElementById("description").innerHTML = content.en.description;
+        });
+
+        langFrBtn.addEventListener("click", () => {
+            document.getElementById("quote").innerHTML = content.fr.quote;
+            document.getElementById("welcome-message").innerHTML = content.fr.welcome;
+            document.getElementById("description").innerHTML = content.fr.description;
+        });
+
+        // Animation des cartes de compétences
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+
+</html>
