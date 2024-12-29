@@ -1,1 +1,0 @@
-{"version":3,"file":"contact-B7shcEOf.js","sources":["../../project/contact.html?html-proxy&index=0.js"],"sourcesContent":["\n    import { ThreeAnimation } from './js/three-animation.js';\n    window.threeAnimation = new ThreeAnimation('flow');\n  "],"names":["ThreeAnimation"],"mappings":"6EAEI,OAAO,eAAiB,IAAIA,EAAe,MAAM"}
